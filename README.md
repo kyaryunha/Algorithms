@@ -56,3 +56,136 @@ Algorithms (repository)
 - CodeForces
   - SHIN_Hyun
 
+
+
+
+
+#### Algorithm & Data Structure 점검표 
+
+
+
+##### 적당히 잘 문제 풀 수 있는 유형 
+
+
+
+Basics
+
+- Sort, DP, Binary Search, Divde & Conquer, Back Tracking, Two pointer 
+- LIS, Eratos, Permuation
+- BFS/DFS, Dijkstra, Floyd, Flood-Fill, Bipartite Graph
+- Topological Sort, Undirected Minimum Spanning Tree(Kruskal, Prim)
+- Segment Tree, Union Find Tree
+
+
+
+Advanced
+
+- Euler Tour Technique, Merge Sort Tree, Sqrt Root Decomposition
+
+- Simulated Annealing
+
+
+
+STL
+
+- vector, string, stack, queue, priority_queue, deque, set, map, (python) decimal
+
+
+
+Black Box
+
+- Flow(Dinic), Bipartite Matching (Hopcroft), Minimum Cost Max Flow
+
+
+
+##### 여러 문제 풀어보긴 했는데, 개못해서 연습이 필요해 보이는 유형
+
+
+
+Basics
+
+- Ternary Search
+
+- Knapsack, LCS, LCA
+- Fenwick Tree
+- Bellman Ford, SPFA
+- KMP, Manacher
+
+
+
+Advanced
+
+- Mo's Algorithm
+
+- SCC, Articulation Point and Bridge
+- Monotone Convex Hull
+- Floyd Tortoise and Hare
+- Newton Raphson
+- Ford-Fulkerson, Edmond-Karp
+- Geometry 
+
+
+
+STL
+
+- list
+
+
+
+Black Box
+
+- Min Cut
+
+
+
+##### 거의 안해보았으며, 연습이 필요해 보이는 유형 
+
+
+
+Basics
+
+- Bitmask DP
+
+
+
+Advanced
+
+- Trie
+
+- Tree Binary Search, Centroid
+- Euler Tour
+
+
+
+STL
+
+- unordered_set, unordered_map, multiset
+
+
+
+Black Box
+
+- LR - Flow, Miller Rabin, Minimum Vertex Cover 
+
+
+
+##### 아예 안해본 유형
+
+
+
+Advanced
+
+- Ahocorasic, Z,  Suffix Array
+
+- Johnson's Shortest Path
+- Rotating Callipers
+- Sprague-Grundy
+- Centroid Decomposition, Heavy Light Decomposition 
+- DP Optimaztion (Knuth Opt, Divide & Conquery opt, Convex Hull opt)
+- (그 외 다수)
+
+
+
+STL 
+
+- hash
