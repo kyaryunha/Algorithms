@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<vector>
+#include<algorithm>
+#define pii pair<int,int>
+using namespace std;
+int V,E,a,b,gesu;
+int Dan[10005];
+int visited[10005];
+int dfs_par[10005];
+int dfs_num[10005],dfs_low[10005],dfs_cnt,dfs_root,dfs_root_num;
+vector<int> ans;
+vector<int> adj[10005];
+void DanjulJum(int u)
+{
+    visited[u]=1;
+    dfs_cnt++; dfs_num[u] = dfs_low[u] = dfs_cnt;
+    for(int i=0;i<adj[u].size();i++)
+    {
+        int v = adj[u][i];
+        if(!visited[v])
+        {
+            dfs_par[v]=u;
+            if(u==dfs_root) dfs_root_num++;
+            DanjulJum(v);
+            if(dfs_low[v]>=dfs_num[u]) Dan[u]=1; /// >= is bridge(u), > is dari(u,v)
+            dfs_low[u]=min(dfs_low[v],dfs_low[u]);
+        }
+        else if(v!=dfs_par[u])
+            dfs_low[u]=min(dfs_low[u],dfs_num[v]);
+    }
+}
+int main(void)
+{
+    scanf("%d %d",&V,&E);
+    for(int i=1;i<=V;i++) dfs_par[i]=i;
+    for(int i=1;i<=E;i++)
+    {
+        scanf("%d %d",&a,&b);
+        adj[a].push_back(b);
+        adj[b].push_back(a);
+    }
+    for(int i=1;i<=V;i++)
+    {
+        if(!visited[i])
+        {
+            dfs_root = i; dfs_root_num=0;
+            DanjulJum(i);
+            Dan[dfs_root] = (dfs_root_num>=2);
+        }
+    }
+    for(int i=1;i<=V;i++) if(Dan[i]) gesu++;
+    printf("%d\n",gesu);
+    for(int i=1;i<=V;i++) if(Dan[i]) printf("%d ",i);
+}

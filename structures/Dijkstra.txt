@@ -1,0 +1,28 @@
+struct Dijkstra{ /// Start where Zero Index
+    vector<pii> adj[MAXN];
+    vector<int> dist;
+    vector<bool> visited;
+    void init(int x){
+        dist.assign(x,INF);
+        visited.assign(x,false);
+    }
+    void calc(int start){
+        dist[start] = 0;
+        priority_queue<pii> pq;
+        pq.push({0,start});
+        while(!pq.empty()){
+            int cost=-pq.top().first;
+            int here=pq.top().second; pq.pop();
+            if(visited[here]) continue;
+            visited[here] = true;
+            for(auto &p:adj[here]){
+                int there = p.first;
+                int nextCost = cost + p.second;
+                if(dist[there]>nextCost){
+                    dist[there]=nextCost;
+                    pq.push({-nextCost,there});
+                }
+            }
+        }
+    }
+}graph;

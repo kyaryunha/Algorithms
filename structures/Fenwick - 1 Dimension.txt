@@ -1,0 +1,18 @@
+struct Fenwick{
+    vector<int> arr;
+    vector<int> tree;
+    void init(int i){
+        arr.resize(N+1); tree.resize(N+1);
+    }
+    int sum(int i)
+    {
+        int ans = 0;
+        while(i>0) ans+=tree[i],i-=(i&-i);
+        return ans;
+    }
+    void update(int i,int diff)
+    {
+        while(i<tree.size()) tree[i]+=diff,i+=(i&-i);
+    }
+
+};

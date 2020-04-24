@@ -1,0 +1,2 @@
+ll gcd(ll x,ll y){ return y==0?x:gcd(y,x%y); }
+ll lcm(ll x,ll y){ return x/gcd(x,y)*y; }

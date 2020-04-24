@@ -1,0 +1,14 @@
+struct Fenwick2{
+    int tree[1200][1200];
+    int fsum(int i,int j)
+    {
+        int ans = 0,jj=j;
+        while(i>0){ j=jj; while(j>0) ans+=tree[i][j],j-=(j&-j); i-=(i&-i); }
+        return ans;
+    }
+    void fupdate(int i,int j,int diff)
+    {
+        int jj = j;
+        while(i<=N){ j=jj; while(j<=N) tree[i][j]+=diff,j+=(j&-j); i+=(i&-i); }
+    }
+};

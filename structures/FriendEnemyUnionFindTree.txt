@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+#define forn(i,n) for(int i=1;i<=n;i++)
+#define forz(i,n) for(int i=l;i<n;i++)
+using namespace std;
+int N,M,a,b,par[2005],enemy[2005],ex,ey;
+int pos;
+int _find(int k)
+{
+    if(par[k]==k||k==-1) return k;
+    return par[k]=_find(par[k]);
+}
+void _enemy(int x,int y)
+{
+    x=_find(x); y=_find(y);
+    ex=_find(enemy[x]); ey=_find(enemy[y]);
+    if(ex==y&&ey==x) return;
+
+    enemy[x]=y;
+    enemy[y]=x;
+
+    if(ex!=-1) par[ex]=y;
+    if(ey!=-1) par[ey]=x;
+}
+int main(void)
+{
+    pos = 1;
+    scanf("%d %d",&N,&M);
+    forn(i,N) par[i]=i,enemy[i]=-1;
+    forn(i,M)
+    {
+        scanf("%d %d",&a,&b);
+        _enemy(a,b);
+        a=_find(a); b=_find(b);
+        if(a==b) pos = 0;
+    }
+    printf("%d",pos);
+}

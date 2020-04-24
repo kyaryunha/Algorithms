@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct vec{
+	double x, y;
+
+	bool operator <(vec &p){
+		return x < p.x || (x == p.x && y < p.y);
+	}
+};
+double ccw( vec &O, vec &A, vec &B)
+{
+	return (A.x - O.x) * (B.y - O.y) - (A.y - O.y) * (B.x - O.x);
+}
+vector<vec> convex_hull(vector<vec> P)
+{
+	int n = P.size(), k = 0;
+	if (n == 1) return P;
+	vector<vec> H(2*n);
+
+	sort(P.begin(), P.end());
+
+	// ¾Æ·¡
+	for (int i = 0; i < n; ++i) {
+		while (k >= 2 && ccw(H[k-2], H[k-1], P[i]) <= 0) k--;
+		H[k++] = P[i];
+	}
+
+	// À§
+	for (int i = n-2, t = k+1; i >= 0; i--) {
+		while (k >= t && ccw(H[k-2], H[k-1], P[i]) <= 0) k--;
+		H[k++] = P[i];
+	}
+
+	H.resize(k-1);
+	return H;
+}
+int main(void)
+{
+    int n;
+    scanf("%d",&n);
+    vector<vec> xy(n);
+    vector<vec> H;
+    for(int i=0;i<n;i++) scanf("%lf %lf",&xy[i].x,&xy[i].y);
+    H = convex_hull(xy);
+    printf("%d",H.size());
+}

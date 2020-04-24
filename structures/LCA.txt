@@ -1,0 +1,70 @@
+#include<bits/stdc++.h>
+#define ll int
+#define pii pair<int,int>
+#define magic ios_base::sync_with_stdio(false);cin.tie(nullptr)
+using namespace std;
+
+struct LCA{
+    int n,parent[100005][21],check[100005],depth[100005];
+    vector<int> graph[100005];
+
+    void init(){
+        dfs(1,1);
+        for(int j=1;j<21;j++) for(int i=1;i<=n;i++)
+            parent[i][j]=parent[parent[i][j-1]][j-1];
+    }
+
+    void dfs(int now,int d)
+    {
+        check[now]=true;
+        depth[now]=d;
+        for(int next : graph[now])
+        {
+            if(check[next]) continue;
+            parent[next][0]=now;
+            dfs(next,d+1);
+        }
+    }
+
+    int findDepth(int x,int y) {
+        if(depth[x]>depth[y]) swap(x,y);
+        for(int i=20;i>=0;i--)
+            if(depth[y]-depth[x]>=(1<<i))
+                y=parent[y][i];
+        if(x==y) return x;
+        for(int i=20;i>=0;i--)
+            if(parent[x][i]!=parent[y][i])
+                x=parent[x][i],y=parent[y][i];
+        return parent[x][0];
+    }
+
+}lca;
+
+
+
+
+int main()
+{
+    magic;
+    int m;
+    cin>>lca.n;
+    for(int i=0;i<lca.n-1;i++)
+    {
+        int u,v;
+        cin>>u>>v;
+        lca.graph[u].push_back(v);
+        lca.graph[v].push_back(u);
+    }
+    lca.init();
+
+    cin>>m;
+    while(m--)
+    {
+        int u,v;
+        cin>>u>>v;
+        cout<<(lca.findDepth(u,v))<<'\n';
+    }
+    return 0;
+}
+
+

@@ -1,0 +1,13 @@
+int f(int x){ /** case by case **/ }
+pii floydCycleFinding(int x0){
+    /// First. find k*mu, hare's speed is tortoise*2
+    int tortoise = f(x0), hare = f(f(x0));
+    while(tortoise != hare){ tortoise = f(tortoise); hare = f(f(hare)); }
+    /// Second. find mu
+    int mu = 0; hare = x0;
+    while(tortoise != hare){ tortoise = f(tortoise); hare = f(hare); mu++; }
+    /// Third. find lambda
+    int lambda = 1; hare = f(tortoise);
+    while(tortoise != hare){ hare = f(hare); lambda++; }
+    return {mu, lambda};
+}

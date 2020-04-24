@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+#define magic ios_base::sync_with_stdio(false);cin.tie(nullptr)
+using namespace std;
+int arr[1000005];
+int main(void)
+{
+    magic;
+    int N,sz=0;
+    cin>>N;
+    for(int i=0;i<N;i++) cin>>arr[i];
+    for(int i=0;i<N;i++){
+        /// a <= b upper_bound, a < b lower_bound
+        int p = lower_bound(arr,arr+sz,arr[i])-arr;
+        if(p==sz) sz++;
+        arr[p] = arr[i];
+    }
+    cout<<sz;
+}

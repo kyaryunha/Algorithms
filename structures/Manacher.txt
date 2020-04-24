@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int A[200005],ans;
+string imsi,nex;
+void manachers(string S,int N)
+{
+    int r=0,p=0;
+    for(int i=0;i<N;i++)
+    {
+        if(i<=r) A[i]=min(A[2*p-i],r-i);
+        else A[i]=0;
+        while(i-A[i]-1>=0&&i+A[i]+1<N&&S[i-A[i]-1]==S[i+A[i]+1]) A[i]++;
+        if(i+A[i]>r){ r=A[i]+i; p=i; }
+    }
+}
+int main(void)
+{
+    cin >> imsi;
+    int isiz = imsi.size();
+    nex+='#';
+    for(int i=0;i<isiz;i++)
+    {
+        nex+=imsi[i];
+        nex+='#';
+    }
+    int nsiz = nex.size();
+    manachers(nex,nsiz);
+    for(int i=0;i<nsiz;i++) ans=max(ans,A[i]);
+    printf("%d",ans);
+}

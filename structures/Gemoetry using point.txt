@@ -1,0 +1,77 @@
+struct Point{
+    int x,y;
+    bool operator==(Point rhs){
+        return x==rhs.x && y==rhs.y;
+    }
+    bool operator<(Point rhs){
+        return x==rhs.x?y<rhs.y:x<rhs.x;
+    }
+    bool operator<=(Point rhs){
+        return x==rhs.x?y<=rhs.y:x<=rhs.x;
+    }
+    bool operator>(Point rhs){
+        return x==rhs.x?y>rhs.y:x>rhs.x;
+    }
+    bool operator>=(Point rhs){
+        return x==rhs.x?y>=rhs.y:x>=rhs.x;
+    }
+    Point operator+(Point rhs){
+        return Point{x+rhs.x,y+rhs.y};
+    }
+    Point operator-(Point rhs){
+        return Point{x-rhs.x,y-rhs.y};
+    }
+    Point operator*(int t){
+        return Point{x*t,y*t};
+    }
+};
+struct Line{
+    Point pos,dir;
+};
+
+/// 원점에서 벡터 q가 벡터 p에 반시계 방향이면 양수, 시계 방향이면 음수, 평행이면 0을 반환한다.
+int ccw(Point p, Point q){
+    ///오버플로 방지용으로 1,0,-1 던져주는거
+    if( p.x*q.y-p.y*q.x>=1) return 1;
+    else if( p.x*q.y-p.y*q.x<=-1) return -1;
+    else return 0;
+    /// 값 던져주는거
+    return p.x*q.y-p.y*q.x;
+}
+
+/// 점 r을 기준으로 벡터 rq가 벡터 rp에 반시계 방향이면 양수,
+/// 시계방향이면 음수, 평행이면, 0을 반환한다
+int ccw2(Point r,Point p,Point q){
+    return ccw(p-r,q-r);
+    /// 양수면 세 점 r,p,q의 회전 방향이 좌회전
+    /// 음수면 세 점 r,p,q의 회전 방향이 우회전
+}
+/// 점 c가 선분 (a,b)에 위치하는가를 검사
+bool between(Point a,Point b,Point c){
+    if(ccw2(a,b,c)) return false;
+    if(a.x!=b.x) return (a.x<=c.x&&c.x<=b.x)||(b.x<=c.x&&c.x<=a.x);
+    else return (a.y<=c.y&&c.y<=b.y)||(b.y<=c.y&&c.y<=a.y);
+}
+
+/// 세 점 a,b,c의 회전 방향 검사에서 좌회전이면 1, 우회전이면 -1, 일직선이면 0을 반환
+int direction(Point a,Point b,Point c){
+    if(ccw2(a,b,c)<0) return -1;
+    if(ccw2(a,b,c)>0) return 1;
+    else return 0;
+}
+
+/// 선분의 끝점이 교차점이 되는 경우를 제외하는 경우(선분 ab, 선분 cd)
+bool intersectProp(Point a,Point b,Point c,Point d){
+    return direction(a,b,c)*direction(a,b,d)<0&&direction(c,d,a)*direction(c,d,b)<0;
+}
+/// 선분의 끝점이 교차점이 되는 경우를 허용하는 경우(선분 ab, 선분 cd)
+bool intersect(Point a,Point b,Point c,Point d){
+
+    if(direction(a,b,c)*direction(a,b,d)==0&&direction(c,d,a)*direction(c,d,b)<=0){
+            if(b<a) swap(a,b);
+            if(d<c) swap(c,d);
+            return c<=b && a<=d;
+    }
+    return direction(a,b,c)*direction(a,b,d)<=0&&direction(c,d,a)*direction(c,d,b)<=0;
+}
+vector<Line> vec(3005);
