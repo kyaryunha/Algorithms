@@ -1,11 +1,14 @@
 # Algorithms
 
 - 나도 알고리즘 문제 풀면서 깃헙 잡초 키울래 ~ 
+
 - 풀은 문제들 중 기억할 만한 것들만 올림
 
+- 개발 할 때는 코드를 가독성 있게 작성하려 노력하지만, 알고리즘 문제를 풀 때는 그렇지 않을 수 있습니다.
 
+  - #define forn(i,N) 등등... 
 
-
+  
 
 #### Folder 구조
 
@@ -44,9 +47,10 @@ Algorithms (repository)
 - BOJ
   - [kyaryunha](https://www.acmicpc.net/user/kyaryunha)  ( 491문제 / 고 2~고3 때 쓰던 계정 / 지금은 안씀 )
   - [kyaryunha_cpp](https://www.acmicpc.net/user/kyaryunha_cpp) ( 514문제 / 대학생 때 새로 만든 계정 / [Solved Platinum I](https://solved.ac/profile/kyaryunha_cpp) )
-  - [kyaryunha_js](https://www.acmicpc.net/user/kyaryunha_js) (65문제)
-  - [kyaryunha_python](https://www.acmicpc.net/user/kyaryunha_python) (49문제)
-  - [kyaryunha_kotlin](https://www.acmicpc.net/user/kyaryunha_kotlin) (24문제)
-  - [kyaryunha_aheui](https://www.acmicpc.net/user/kyaryunha_aheui) (9문제)
+  - [kyaryunha_js](https://www.acmicpc.net/user/kyaryunha_js) ( 65문제 )
+  - [kyaryunha_python](https://www.acmicpc.net/user/kyaryunha_python) ( 49문제 )
+  - [kyaryunha_kotlin](https://www.acmicpc.net/user/kyaryunha_kotlin) ( 24문제 )
+  - [kyaryunha_aheui](https://www.acmicpc.net/user/kyaryunha_aheui) ( 9문제 )
 - CodeForces
   - SHIN_Hyun
+
