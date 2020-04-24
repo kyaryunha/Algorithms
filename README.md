@@ -10,7 +10,7 @@
 
   
 
-#### Folder 구조
+## Folder 구조
 
 ```
 Algorithms (repository)
@@ -24,9 +24,7 @@ Algorithms (repository)
 
 ```
 
-
-
-#### 설명
+### 설명
 
 - practice
   - 주로 정형적이지 않은 알고리즘이나, 응용이 된 것들에 대해 문제번호와 함께 코드가 올라감
@@ -40,9 +38,7 @@ Algorithms (repository)
 
 
 
-
-
-#### Online Judge
+## Online Judge
 
 - Codeup 
   - vc0612 ( 335문제 / 늅늅이던 고1때 쓰던 계정 / 지금은 안씀 ) 
@@ -58,13 +54,11 @@ Algorithms (repository)
 
 
 
-
-
-#### Algorithm & Data Structure 점검표 
+## Algorithm & Data Structure 점검표 
 
 
 
-##### 적당히 잘 문제 풀 수 있는 유형 
+#### 적당히 잘 문제 풀 수 있는 유형 
 
 
 
@@ -98,7 +92,7 @@ Black Box
 
 
 
-##### 여러 문제 풀어보긴 했는데, 개못해서 연습이 필요해 보이는 유형
+#### 여러 문제 풀어보긴 했는데, 개못해서 연습이 필요해 보이는 유형
 
 
 
@@ -138,7 +132,7 @@ Black Box
 
 
 
-##### 거의 안해보았으며, 연습이 필요해 보이는 유형 
+#### 거의 안해보았으며, 연습이 필요해 보이는 유형 
 
 
 
@@ -169,7 +163,7 @@ Black Box
 
 
 
-##### 아예 안해본 유형
+#### 아예 안해본 유형
 
 
 
