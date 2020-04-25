@@ -113,7 +113,7 @@ Basics
 
 Advanced
 
-- Mo's Algorithm, Merge Sort Tree, Sqrt Root Decomposition
+- Mo's Algorithm, Merge Sort Tree, Square Root Decomposition
 
 - SCC, Articulation Point and Bridge
 - Monotone Convex Hull
