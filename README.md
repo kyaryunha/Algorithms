@@ -102,8 +102,6 @@ Black Box
 
 Basics
 
-- Ternary Search
-
 - Knapsack, LCS, LCA
 - Fenwick Tree
 - Bellman Ford, SPFA
@@ -142,7 +140,7 @@ Black Box
 
 Basics
 
-- Bitmask DP
+- Bitmask DP, Ternary Search
 
 
 
