@@ -32,6 +32,7 @@ Algorithms (repository)
   - 주로 정형적이지 않은 알고리즘이나, 응용이 된 것들에 대해 문제번호와 함께 코드가 올라감
   - 정형적인 알고리즘이더라도 올라갈지도..? 
   - 모두 컴파일이 되는 코드
+  - 각 폴더마다 풀이 설명이 있을 수도 있고, 없을 수도 있고... 
   
 - structures
   - 주로 정형적인 알고리즘 및 자료구조의 코드가 올라감 
@@ -77,7 +78,7 @@ Basics
 
 Advanced
 
-- Euler Tour Technique, Merge Sort Tree, Sqrt Root Decomposition
+- Euler Tour Technique
 
 - Simulated Annealing
 
@@ -112,7 +113,7 @@ Basics
 
 Advanced
 
-- Mo's Algorithm
+- Mo's Algorithm, Merge Sort Tree, Sqrt Root Decomposition
 
 - SCC, Articulation Point and Bridge
 - Monotone Convex Hull
@@ -166,7 +167,7 @@ Black Box
 
 
 
-#### 아예 안해본 유형
+#### 아예 안해본 유형인데 언젠간 해야할 것 같은 유형 
 
 
 
