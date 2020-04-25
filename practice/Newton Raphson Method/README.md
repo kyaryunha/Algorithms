@@ -1,14 +1,14 @@
-### Newton Raphson Method
+# Newton Raphson Method
 
 
 
-##### [BOJ 14786 Ax + Bsinx = C](https://www.acmicpc.net/problem/14786)
+### [BOJ 14786 Ax + Bsinx = C](https://www.acmicpc.net/problem/14786)
 
 그냥 Newton Raphson Method 문제 
 
 
 
-##### [BOJ 1305 Ax + Bsinx = C2](https://www.acmicpc.net/problem/1305)
+### [BOJ 1305 Ax + Bsinx = C2](https://www.acmicpc.net/problem/1305)
 
 14786과 동일하지만, 추가적으로 실수 오차를 신경써줘야 하는 문제.
 

@@ -1,8 +1,8 @@
-### Merge Sort Tree
+# Merge Sort Tree
 
 
 
-##### [BOJ 13537 수열과 쿼리 1](https://www.acmicpc.net/problem/13537)
+### [BOJ 13537 수열과 쿼리 1](https://www.acmicpc.net/problem/13537)
 
 Merge Sort Tree 
 
@@ -10,7 +10,7 @@ Merge Sort Tree
 
 
 
-##### [BOJ 13544 수열과 쿼리 3](https://www.acmicpc.net/problem/13544)
+### [BOJ 13544 수열과 쿼리 3](https://www.acmicpc.net/problem/13544)
 
 Merge sort Tree
 

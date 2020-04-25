@@ -1,8 +1,8 @@
-### Square Root Decomposition
+# Square Root Decomposition
 
 
 
-##### [BOJ 13548 수열과 쿼리 6](https://www.acmicpc.net/problem/13548)
+### [BOJ 13548 수열과 쿼리 6](https://www.acmicpc.net/problem/13548)
 
 Mo's Algorithm + Sqrt Decomposition 
 
@@ -25,7 +25,7 @@ Online Query
 
 
 
-##### [17410 수열과 쿼리 1.5](https://www.acmicpc.net/problem/17410)
+### [17410 수열과 쿼리 1.5](https://www.acmicpc.net/problem/17410)
 
 14504 보다 범위가 작은 동일한 문제 
 
