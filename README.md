@@ -1,8 +1,10 @@
 # Algorithms
 
-- 나도 알고리즘 문제 풀면서 깃헙 잡초 키울래 ~ 
+- 나도 알고리즘 문제 풀면서 깃헙 잡초 키울래 ~
 
-- 풀은 문제들 중 기억할 만한 것들만 올림
+- 잡초 키우고 싶을 때만 커밋하기 때문에, 제가 풀은 문제를 모두 올리진 않습니다. 
+
+- 풀은 문제들 중 기억할 만한 것들만 안귀찮을 때 올림
 
 - 개발 할 때는 코드를 가독성 있게 작성하려 노력하지만, 알고리즘 문제를 풀 때는 그렇지 않을 수 있습니다.
 
@@ -50,7 +52,8 @@ Algorithms (repository)
   - [kyaryunha_kotlin](https://www.acmicpc.net/user/kyaryunha_kotlin) ( 24문제 )
   - [kyaryunha_aheui](https://www.acmicpc.net/user/kyaryunha_aheui) ( 9문제 )
 - CodeForces
-  - SHIN_Hyun
+  - [kyaryunha](http://codeforces.com/profile/kyaryunha) ( 203 문제 / Current Rating : Mint / Max Rating : Blue )
+  - [SHIN_Hyun](http://codeforces.com/profile/SHIN_Hyun) ( 27 문제 / Current Rating : Blue / Max Rating : Blue )
 
 
 
