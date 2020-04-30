@@ -69,7 +69,7 @@ Algorithms (repository)
 Basics
 
 - Sort, DP, Binary Search, Divde & Conquer, Back Tracking, Two pointer 
-- LIS, Eratos, Permuation
+- LIS, Eratos, Permutation
 - BFS/DFS, Dijkstra, Floyd, Flood-Fill, Bipartite Graph
 - Topological Sort, Undirected Minimum Spanning Tree(Kruskal, Prim)
 - Segment Tree, Union Find Tree
