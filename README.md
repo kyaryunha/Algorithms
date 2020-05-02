@@ -19,11 +19,11 @@ Algorithms (repository)
 -- practice (directory)
 ---- (algorithm1)
 ------ (source code).cpp
------- (source code).cpp
 --structures (directory)
 ---- (source code).txt
----- (source code).txt
-
+--online competition (directory)
+---- (competition name 1)
+------ (source code).cpp
 ```
 
 ### 설명
@@ -33,11 +33,13 @@ Algorithms (repository)
   - 정형적인 알고리즘이더라도 올라갈지도..? 
   - 모두 컴파일이 되는 코드
   - 각 폴더마다 풀이 설명이 있을 수도 있고, 없을 수도 있고... 
-  
 - structures
   - 주로 정형적인 알고리즘 및 자료구조의 코드가 올라감 
   - practice에 올린 것들보다는 비교적 쉬운 알고리즘..?
   - structure 만 있을 수도 있음 
+- online competition
+  - 코드 공개가 가능한 온라인 대회나, 온라인 연습셋 
+  - 개인 참가만 올리며, 팀 참가는 올리지 않음 
 
 
 
@@ -47,7 +49,7 @@ Algorithms (repository)
   - vc0612 ( 335문제 / 늅늅이던 고1때 쓰던 계정 / 지금은 안씀 ) 
 - BOJ
   - [kyaryunha](https://www.acmicpc.net/user/kyaryunha)  ( 491문제 / 고 2~고3 때 쓰던 계정 / 지금은 안씀 )
-  - [kyaryunha_cpp](https://www.acmicpc.net/user/kyaryunha_cpp) ( 514문제 / 대학생 때 새로 만든 계정 / [Solved Platinum I](https://solved.ac/profile/kyaryunha_cpp) )
+  - [kyaryunha_cpp](https://www.acmicpc.net/user/kyaryunha_cpp) ( 524문제 / 대학생 때 새로 만든 계정 / [Solved Platinum I](https://solved.ac/profile/kyaryunha_cpp) )
   - [kyaryunha_js](https://www.acmicpc.net/user/kyaryunha_js) ( 65문제 )
   - [kyaryunha_python](https://www.acmicpc.net/user/kyaryunha_python) ( 49문제 )
   - [kyaryunha_kotlin](https://www.acmicpc.net/user/kyaryunha_kotlin) ( 24문제 )
