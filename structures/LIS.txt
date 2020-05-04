@@ -1,18 +1,32 @@
 #include<bits/stdc++.h>
 #define magic ios_base::sync_with_stdio(false);cin.tie(nullptr)
 using namespace std;
+
 int arr[1000005];
-int main(void)
-{
+int dp[1000005]; // it do not means lis arr
+int lis[1000005];
+int main(void){
     magic;
-    int N,sz=0;
+    int N, sz = 0;
     cin>>N;
-    for(int i=0;i<N;i++) cin>>arr[i];
     for(int i=0;i<N;i++){
-        /// a <= b upper_bound, a < b lower_bound
-        int p = lower_bound(arr,arr+sz,arr[i])-arr;
-        if(p==sz) sz++;
-        arr[p] = arr[i];
+        cin>>arr[i];
     }
-    cout<<sz;
+    for(int i=0;i<N;i++){
+        int p = lower_bound(dp,dp+sz,arr[i])-dp;
+        if(p==sz) sz++;
+        dp[p] = arr[i];
+        lis[i] = p+1;
+    }
+    cout<<sz<<'\n';
+    vector<int> ans;
+    for(int i=N-1;i>=0;i--){
+        if(lis[i]==sz){
+            ans.push_back(arr[i]);
+            sz--;
+        }
+    }
+    reverse(ans.begin(),ans.end());
+    for(int &p:ans) cout<<p<<' ';
 }
+
