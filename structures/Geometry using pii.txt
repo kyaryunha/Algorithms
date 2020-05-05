@@ -57,7 +57,7 @@ bool intersect(Point a,Point b,Point c,Point d){
     if(direction(a,b,c)*direction(a,b,d)==0&&direction(c,d,a)*direction(c,d,b)<=0){
             if(b<a) swap(a,b);
             if(d<c) swap(c,d);
-            return c<=b && a<=d;
+            return c<=b && a<=d; /// 나중에 안귀찮을 때 고쳐야 하는 라인 
     }
     return direction(a,b,c)*direction(a,b,d)<=0&&direction(c,d,a)*direction(c,d,b)<=0;
 }
