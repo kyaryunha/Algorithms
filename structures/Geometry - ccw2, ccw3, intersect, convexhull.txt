@@ -1,4 +1,3 @@
-// int형이랑 double형 섞어쓴거 주의... int할 땐 상관 없는데 double 다룰떈 나중에 터질지도..? 
 
 struct vec2{
     int x,y;
@@ -9,7 +8,7 @@ struct vec2{
         return x<=p.x || (x==p.x&&y<=p.y);
     }
     bool operator>(vec2&p){
-        return !(x<p.x || (x==p.x&&y<p.y));
+        return x>p.x || (x==p.x&&y>p.y);
     }
 };
 
