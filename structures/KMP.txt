@@ -1,43 +1,51 @@
+#include<bits/stdc++.h>
+#define magic ios_base::sync_with_stdio(false);cin.tie(nullptr)
+using namespace std;
+#define ll long long
+#define mod 1000000007
+#define INF 1023456789
+#define pii pair<int,int>
+
 const int MAXN = 1000005;
 struct KMP{
-    /// 지역 변수 하면 안됨
     string First, Second;
     vector<int> ans;
     int b[MAXN];
-    int Fsiz,Ssiz;
     void init(){
-        Fsiz = First.size();
-        Ssiz = Second.size();
-        int i = 0,j = -1;
-        b[0]=-1;
-        while(i<Ssiz)
-        {
-            while(j>=0 && Second[i]!=Second[j]) j=b[j];
-            i++;
-            j++;
-            b[i]=j;
+        int i = 0, j= -1;
+        b[0] = -1;
+        while(i<Second.size()){
+            while(j>=0&&Second[i]!=Second[j])
+                j = b[j];
+            i++; j++;
+            b[i] = j;
         }
     }
     void query(){
         int i = 0, j = 0;
-        while(i<Fsiz)
-        {
-            while(j>=0 && First[i]!=Second[j]) j=b[j];
+        while(i<First.size()){
+            while(j>=0&&First[i]!=Second[j])
+                j = b[j];
             i++; j++;
-            if(j==Ssiz){
+            if(j==Second.size()){
                 ans.push_back(i-j+1);
-                j=b[j];
+                j = b[j];
             }
         }
     }
 }words;
 
-int main(void)
-{
-    getline(cin,words.First);
-    getline(cin,words.Second);
+int main(void){
+    // magic;
+    int N,M;
+    cin>>N;
+    cin>>M;
+    cin>>words.First;
+    words.Second = "I";
+    for(int i=1;i<=N;i++){
+        words.Second += "OI";
+    }
     words.init();
     words.query();
-    printf("%d\n",words.ans.size());
-    for(int i=0;i<words.ans.size();i++) printf("%d\n",words.ans[i]);
+    printf("%d\n",words.ans.size()); /// 각 ans에 들어있는 것은 부분 문자열이 나타나는 위치 들 
 }
