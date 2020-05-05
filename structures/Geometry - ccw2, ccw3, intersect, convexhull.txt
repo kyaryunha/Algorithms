@@ -1,0 +1,55 @@
+// int형이랑 double형 섞어쓴거 주의... int할 땐 상관 없는데 double 다룰떈 나중에 터질지도..? 
+
+struct vec2{
+    int x,y;
+    bool operator<(vec2&p){
+        return x<p.x || (x==p.x&&y<p.y);
+    }
+    bool operator<=(vec2&p){
+        return x<=p.x || (x==p.x&&y<=p.y);
+    }
+    bool operator>(vec2&p){
+        return !(x<p.x || (x==p.x&&y<p.y));
+    }
+};
+
+double ccw2(vec2 &A, vec2 &B){
+    return A.x*B.y - A.y*B.x;
+}
+
+double ccw3(vec2 &O, vec2 &A, vec2 &B){
+    return (A.x - O.x)*(B.y - O.y) - (A.y - O.y)*(B.x - O.x);
+}
+
+bool intersect(pair<vec2,vec2> a, pair<vec2,vec2> b ){
+    ll one = ccw3(a.first, a.second, b.first) * ccw3(a.first, a.second, b.second);
+    ll two = ccw3(b.first, b.second, a.first) * ccw3(b.first, b.second, a.second);
+    if(one==0&&two==0){
+        if(a.first>a.second) swap(a.first,a.second);
+        if(b.first>b.second) swap(b.first,b.second);
+        return !(a.second<b.first||b.second<a.first);
+    }
+    return (one<=0&&two<=0);
+}
+
+vector<vec2> convex_hull(vector<vec2> P){
+    int n = P.size(), k = 0;
+    if(n==1) return P;
+    vector<vec2> H(2*n);
+
+    sort(P.begin(),P.end());
+
+    /// are
+    for(int i=0;i<n;i++){
+        while(k>=2&&ccw3(H[k-2],H[k-1],P[i])<=0) k--;
+        H[k++] = P[i];
+    }
+
+    /// wee
+    for(int i=n-2,t=k+1;i>=0;i--){
+        while(k>=t&&ccw3(H[k-2],H[k-1],P[i])<=0) k--;
+        H[k++] = P[i];
+    }
+    H.resize(k-1);
+    return H;
+}
