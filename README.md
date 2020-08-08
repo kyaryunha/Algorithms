@@ -49,13 +49,13 @@ Algorithms (repository)
   - vc0612 ( 335문제 / 늅늅이던 고1때 쓰던 계정 / 지금은 안씀 ) 
 - BOJ
   - [kyaryunha](https://www.acmicpc.net/user/kyaryunha)  ( 491문제 / 고 2~고3 때 쓰던 계정 / 지금은 안씀 )
-  - [kyaryunha_cpp](https://www.acmicpc.net/user/kyaryunha_cpp) ( 560문제 / 대학생 때 새로 만든 계정 / [Solved Platinum I](https://solved.ac/profile/kyaryunha_cpp) )
+  - [kyaryunha_cpp](https://www.acmicpc.net/user/kyaryunha_cpp) ( 595문제 / 대학생 때 새로 만든 계정 / [Solved Platinum I](https://solved.ac/profile/kyaryunha_cpp) )
   - [kyaryunha_js](https://www.acmicpc.net/user/kyaryunha_js) ( 65문제 )
   - [kyaryunha_python](https://www.acmicpc.net/user/kyaryunha_python) ( 49문제 )
   - [kyaryunha_kotlin](https://www.acmicpc.net/user/kyaryunha_kotlin) ( 24문제 )
   - [kyaryunha_aheui](https://www.acmicpc.net/user/kyaryunha_aheui) ( 9문제 )
 - CodeForces
-  - [kyaryunha](http://codeforces.com/profile/kyaryunha) ( 203 문제 / Current Rating : Mint / Max Rating : Blue )
+  - [kyaryunha](http://codeforces.com/profile/kyaryunha) ( 211 문제 / Current Rating : Blue / Max Rating : Blue )
   - [SHIN_Hyun](http://codeforces.com/profile/SHIN_Hyun) ( 27 문제 / Current Rating : Blue / Max Rating : Blue )
 
 
