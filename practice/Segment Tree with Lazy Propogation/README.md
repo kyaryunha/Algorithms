@@ -21,3 +21,10 @@ Segment Tree with Lazy Propogation - 숫자 XOR
 ### [BOJ 1395 스위치](https://www.acmicpc.net/problem/1395)
 
 Segment Tree with Lazy Propogation - 01 XOR 
+
+
+
+### [BOJ 14287 내리 칭찬3](https://www.acmicpc.net/problem/14287)
+
+Segment Tree with Lazy Propogation - 구간합 + Euler Tour Technique
+
