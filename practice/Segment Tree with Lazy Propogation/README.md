@@ -28,3 +28,15 @@ Segment Tree with Lazy Propogation - 01 XOR
 
 Segment Tree with Lazy Propogation - 구간합 + Euler Tour Technique
 
+
+
+### [BOJ 18437 회사 문화 5](https://www.acmicpc.net/problem/18437)
+
+Segment Tree with Lazy Propogation - 구간 합 변형 ( 아래를 모두 끄거나 키거나 ) + Euler Tour Technique 
+
+Euler Tour Technique 에서 x에서 in ~ out 까지를 구하고 싶을 때, 
+
+x를 제외하고 싶으면 (in[x]+1,out[x]) 이렇게 해야함에 주의, 
+
+x를 포함하고 싶으면 (in[x], out[x])
+
