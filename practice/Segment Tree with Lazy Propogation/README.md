@@ -40,3 +40,11 @@ x를 제외하고 싶으면 (in[x]+1,out[x]) 이렇게 해야함에 주의,
 
 x를 포함하고 싶으면 (in[x], out[x])
 
+
+
+### [BOJ 13925 수열과 쿼리 13](https://www.acmicpc.net/problem/13925)
+
+Segment Tree with Lazy Propogation - 구간 합 변형 
+
+주의할 점 - lazy 인자가 2개다, mod 연산 잘해줘야 한다.
+
