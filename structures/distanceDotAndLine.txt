@@ -1,0 +1,19 @@
+// 테스트 X 인 코드 
+struct Point{
+    double x,y;
+    double Distance(Point P){
+        return sqrt((P.x-x)*(P.x-x)+(P.y-y)*(P.y-y));
+    }
+
+    double distanceDotAndLine(Point A,Point B,Point P){
+        double len = A.Distance(B);
+        if(len==0) return A.Distance(P);
+        double proj = ((P.x-A.x)*(B.x-A.x)+(P.y-A.y)*(B.y-A.y))/len;
+        if(proj<0) return A.Distance(P);
+        else if(proj>len) return B.Distance(P);
+        else{
+            return fabs((P.y-A.y)*(B.x-A.x)-(P.x-A.x)*(B.y-A.y))/len;
+        }
+    }
+
+};

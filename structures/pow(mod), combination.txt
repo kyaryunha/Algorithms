@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+#define magic ios_base::sync_with_stdio(false);cin.tie(nullptr)
+using namespace std;
+using ll = long long;
+#define mod 1000000007
+#define pll pair<ll, ll>
+
+ll factorial[1000005];
+ll f_inverse[1000005];
+
+
+/// (x^n)mod m
+ll powN(ll x, ll n){
+    if(!n) return 1LL;
+    ll h = powN(x, n/2);
+    h = (h*h)%mod;
+    if(n%2==1) return h = (h*x)%mod;
+    return h;
+}
+
+/// nCr, fast for query
+/// Time Complexity
+/// All: O(N)
+/// Query: O(log Mod)
+ll combination(ll n,ll r) {
+    return factorial[n]*f_inverse[r]%mod*f_inverse[n-r]%mod;
+}
+
+/// nCr, not for query, for small r
+ll combination2(ll n, ll r){
+    r = min(r, n-r); /// 이항 계수의 성질
+    ll ret = 1;
+    for(ll i=1;i<=r;i++){
+        ret *= n;
+        ret /= i;
+        n--;
+    }
+    return ret;
+}
+
+/// init before combination(n, r)
+void combi_init(){
+    factorial[0] = 1;
+    for(ll i = 1;i <= 1000000;i++) factorial[i] = factorial[i-1]*i%mod;
+    f_inverse[1000000] = powN(factorial[1000000],mod-2);
+    for(ll i = 999999;i >= 0;i--) f_inverse[i] = f_inverse[i+1]*(i+1)%mod;
+}
+
+/// 중복조합H: combination(N+R-1, R)
+/// 순열P: (n!) / (n-r)!
+
+int main() {
+    magic;
+    combi_init();
+    ll N, R;
+    cin>>N>>R;
+    cout<<combination(N+R-1, R);
+}
