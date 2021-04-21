@@ -24,6 +24,7 @@ Algorithms (repository)
 --online competition (directory)
 ---- (competition name 1)
 ------ (source code).cpp
+--grammer (directory)
 ```
 
 ### 설명
@@ -39,7 +40,9 @@ Algorithms (repository)
   - structure 만 있을 수도 있음 
 - online competition
   - 코드 공개가 가능한 온라인 대회나, 온라인 연습셋 
-  - 개인 참가만 올리며, 팀 참가는 올리지 않음 
+  - 개인 참가만 올리며, 팀 참가는 올리지 않음 (최근꺼는 모두 private로 올리는 중..)
+- grammer
+  - c언어 문법 어려워... 신기한거 보면 메모메모...
 
 
 

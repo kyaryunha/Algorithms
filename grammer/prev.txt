@@ -1,0 +1,2 @@
+auto it = prev(st.lower_bound(arr[i]));
+cout<<*it<<' ';
