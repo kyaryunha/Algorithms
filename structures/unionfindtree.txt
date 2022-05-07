@@ -3,22 +3,23 @@ int _find(int x){ return par[x]==x?x:par[x]=_find(par[x]); }
 int _union(int x,int y){ x = _find(x), y = _find(y); if(x==y) return 0; par[x]=y; return 1; }
 
 
-struct dsu{
-    int f[3005],siz[3005];
-    void reset(int n){
-        for(int i=1;i<=n;i++)
-            f[i]=i,siz[i]=1;
+struct Dsu{
+    vector<int> par,siz;
+    void init(int n) {
+        par.resize(n+1);
+        siz.resize(n+1);
+        for(int i=1;i<=n;i++) par[i]=i, siz[i]=1;
     }
     int _find(int x){
-        return f[x]!=x?f[x]=_find(f[x]):x;
+        return par[x]!=x?par[x]=_find(par[x]):x;
     }
     void _union(int x, int y){
         x=_find(x),y=_find(y);
         if(x==y) return;
         if(x>y) swap(x,y);
-        siz[x]+=siz[y]; f[y]=x;
+        siz[x]+=siz[y]; par[y]=x;
     }
     int _query(int x){
         x=_find(x); return siz[x];
     }
-}dsu0;
+}dsu;
