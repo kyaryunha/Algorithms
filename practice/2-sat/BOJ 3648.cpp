@@ -1,3 +1,8 @@
+#include<bits/stdc++.h>
+#define magic ios_base::sync_with_stdio(false);cin.tie(nullptr)
+using namespace std;
+#define pii pair<int, int>
+const int MAXN = 20005;
 struct TarjanScc{
     vector<int> graph[MAXN];
     int up[MAXN], visit[MAXN], vtime;
@@ -60,3 +65,40 @@ struct TarjanScc{
             if (visit[i] == 0) dfs(i);
     }
 }scc;
+int main(void){
+    // magic;
+    int N, M;
+    while(scanf("%d %d", &N, &M)==2) {
+        scc.init(2*(N+1));
+        for(int i=1;i<=M;i++) {
+            int x, y, rx, ry;
+            scanf("%d %d", &x, &y);
+            if(x<0) {
+                rx = -x;
+                x = rx + N; /// 절댓값 + N
+            }
+            else {
+                rx = x + N;
+            }
+            if(y<0) {
+                ry = -y;
+                y = ry + N; /// 절댓값 + N
+            }
+            else {
+                ry = y + N;
+            }
+            scc.graph[rx].push_back(y);
+            scc.graph[ry].push_back(x);
+        }
+        scc.graph[1+N].push_back(1); /// 1은 무조건 True 여야 한다.
+        scc.get_scc(2*(N+1));
+        bool answer = true;
+        for(int i=1;i<=N;i++) {
+            if(scc.scc_idx[i]==scc.scc_idx[i+N]) {
+                answer = false;
+            }
+        }
+        puts(answer?"yes":"no");
+    }
+}
+
