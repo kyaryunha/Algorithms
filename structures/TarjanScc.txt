@@ -1,18 +1,20 @@
+const int MAXN = 100005;
 struct TarjanScc{
     vector<int> graph[MAXN];
     int up[MAXN], visit[MAXN], vtime;
     vector<int> stk;
     int scc_idx[MAXN], scc_cnt;
-
     vector<int> dag[MAXN]; /// start where One Index
 
     void init(int N) {
         stk.clear();
         scc_cnt = 0;
+        vtime = 0;
         for(int i=0;i<=N;i++) {
             graph[i].clear();
-            up[i] = 0; visit[i] = 0; vtime = 0;
+            up[i] = 0; visit[i] = 0;
             scc_idx[i] = 0;
+            dag[i].clear();
         }
 
     }
@@ -31,16 +33,14 @@ struct TarjanScc{
         if (up[nod] == visit[nod]) {
             ++scc_cnt;
             int t;
-            int chk = 0;
             do {
                 t = stk.back();
-                dag[scc_cnt].push_back(t); ///
+                dag[scc_cnt].push_back(t);
                 stk.pop_back();
                 scc_idx[t] = scc_cnt;
             } while (!stk.empty() && t != nod);
         }
     }
-
     void dagSort() { /// dag sort
         for(int i=1;i<=scc_cnt;i++){
             sort(dag[i].begin(),dag[i].end());
@@ -49,14 +49,15 @@ struct TarjanScc{
     }
 
     /// find SCCs in given directed graph
-    /// O(V+E), 0-index
+    /// O(V+E)
     /// the order of scc_idx constitutes a reverse topological sort
     void get_scc(int n) {
         vtime = 0;
         memset(visit, 0, sizeof(visit));
         scc_cnt = 0;
         memset(scc_idx, 0, sizeof(scc_idx));
-        for (int i = 0; i < n; ++i)
+        /// for (int i = 0; i < n; ++i) /// if 0-index
+        for (int i = 1; i <= n; ++i) /// if 1-index
             if (visit[i] == 0) dfs(i);
     }
 }scc;
