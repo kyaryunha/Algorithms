@@ -48,3 +48,9 @@ Segment Tree with Lazy Propogation - 구간 합 변형
 
 주의할 점 - lazy 인자가 2개다, mod 연산 잘해줘야 한다.
 
+
+
+### [BOJ 15782 Calculate! 2](https://www.acmicpc.net/problem/15782)
+
+Segment Tree with Lazy Propogation - 숫자 XOR + Euler Tour Technique 
+
